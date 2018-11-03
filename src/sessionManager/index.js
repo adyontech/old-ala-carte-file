@@ -12,8 +12,7 @@ export { refreshTokens };
 export { logout };
 export default {
   initSession,
-  refreshTokens,
-  auth0
+  refreshTokens
 };
 
 function logout() {
@@ -25,10 +24,10 @@ function logout() {
 function initSession() {
   return new Promise(resolve => {
     let tokenExpiryDate = Store.getters["tokensExpiry"];
-    if (!tokenExpiryDate) {
-      console.log("No token expiry date. user probably never logged in");
-      return Router.push("/login");
-    }
+    // if (!tokenExpiryDate) {
+    //   console.log("No token expiry date. user probably never logged in");
+    //   return Router.push("/login");
+    // }
 
     let tenMinutesBeforeExpiry = subtractMinutes(tokenExpiryDate, 10); //If the token has expired or will expire in the next 30 minutes
     const now = new Date();
