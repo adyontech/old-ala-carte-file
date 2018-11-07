@@ -9,8 +9,8 @@ const store = new Vuex.Store({
     // AuthStore
   },
   state: {
-    //  baseServerURL:"https://skylimservices.tk/",
-    baseServerURL: "http://localhost:4000"
+    //  baseServerURL:"https://something.tk/",
+    baseServerURL: "http://localhost:3000"
   },
   getters: {
     getBaseURL: state => state.baseServerURL

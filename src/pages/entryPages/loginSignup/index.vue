@@ -12,21 +12,7 @@
 <script>
 export default {
   data() {
-    return {
-      clipped: false,
-      drawer: true,
-      fixed: false,
-      items: [
-        {
-          icon: "bubble_chart",
-          title: "Inspire"
-        }
-      ],
-      miniVariant: false,
-      right: false,
-      rightDrawer: false,
-      title: "Vuetify.js"
-    };
+    return {};
   }
 };
 </script>
