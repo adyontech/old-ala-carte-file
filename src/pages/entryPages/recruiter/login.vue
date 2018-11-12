@@ -100,9 +100,10 @@ export default {
         let response = await loginRecruiter({ email, password });
 
         if (response.error === undefined) {
-          if (data.success) {
+          if (response.success) {
+            console.log(response);
             this.setTokenForUser({
-              token: data.token
+              token: response.token
             });
             this.$router.push({
               // path: "/dashboard"

@@ -9,6 +9,7 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
+    "@babel/polyfill": "^7.0.0",
     "axios": "^0.18.0",
     "date-fns": "^1.29.0",
     "serve": "^10.0.2",

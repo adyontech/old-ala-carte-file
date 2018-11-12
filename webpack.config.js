@@ -4,7 +4,7 @@ var webpack = require("webpack");
 var resolve = p => path.resolve(__dirname, p);
 
 module.exports = {
-  entry: "./src/main.js",
+  entry: ["@babel/polyfill", "./src/main.js"],
   output: {
     path: resolve("./dist"),
     publicPath: "/dist/",
