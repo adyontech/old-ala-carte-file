@@ -3,10 +3,10 @@
     <v-flex xs12 md5 class="mid-box elevation-3">
       <v-card flat style="padding:0">
         <v-layout class="selector-tab " align-center justify-center row fill-height>
-          <v-flex xs6 @click="tabSwitchToSignup" class="selector-tab-content pt-3" :style="styleObjectSignUp">
+          <v-flex xs6 @click="tabSwitchToSignup" class="selector-tab-content pt-3" v-bind:class="{'elevation-3': tabToShow == 'SignUpTab' }" :style="styleObjectSignUp">
             Signup
           </v-flex>
-          <v-flex xs6 @click="tabSwitchToLogin" class="selector-tab-content pt-3" :style="styleObjectLogin">
+          <v-flex xs6 @click="tabSwitchToLogin" class="selector-tab-content pt-3" v-bind:class="{'elevation-3': tabToShow == 'loginInTab' }" :style="styleObjectLogin">
             Login
           </v-flex>
         </v-layout>

@@ -1,9 +1,10 @@
 <template>
-    <v-toolbar color="#FFF">
+    <v-toolbar class="elevation-1" color="#FFF">
         <v-toolbar-side-icon>
             <v-img :src="`../../../public/v.png`" :lazy-src="`../../../public/v.png`" aspect-ratio="1" class="grey lighten-2"></v-img>
         </v-toolbar-side-icon>
-        <v-toolbar-title>VUETiFY</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-toolbar-title>VUEtIFY</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">
             <!-- <v-btn flat>Link One</v-btn>
@@ -11,7 +12,7 @@
       <v-btn flat>Link Three</v-btn> -->
             <v-menu :nudge-width="100">
                 <v-toolbar-title slot="activator">
-                    <span>In</span>
+                    <span>Sign In As</span>
                     <v-icon>arrow_drop_down</v-icon>
                 </v-toolbar-title>
 

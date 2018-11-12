@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-card flat>
     <v-layout column class="white" pa-5>
       <v-flex xs11>
         <v-text-field color="grey darken-1" hint="Please choose special email" prepend-icon="email" outline v-model="user.email" single-line placeholder="Enter the email used during signup..."></v-text-field>
@@ -16,7 +16,7 @@
       <v-flex mb-1>
         <v-layout row justify-center>
           <v-flex xs3>
-            <v-btn block class="white--text px-5" @click="handleUserLogin" style="border-radius:5px" color="blue accent-2">log in</v-btn>
+            <v-btn block class="white--text px-5" @click="handleUserLogin" style="border-radius:5px" color="blue accent-2">Log in</v-btn>
           </v-flex>
         </v-layout>
       </v-flex>
@@ -38,8 +38,14 @@
         </v-flex>
 
       </v-layout>
+      <v-flex pb-1 mt-2>
+        <v-layout align-center justify-center="" row fill-height class="black--text text--accent-2 subheading">
+          By signing up, you agree to our <span class="blue--text"> Terms of Service and Privacy Policy</span>
+        </v-layout>
+      </v-flex>
     </v-layout>
-  </div>
+  </v-card>
+
 </template>
 
 <script>
