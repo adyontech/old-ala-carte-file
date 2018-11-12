@@ -1,14 +1,15 @@
 <template>
-    <v-app style="position:relative">
-        <p>kyon hello</p>
-        <router-view />
-    </v-app>
+  <v-app style="position:relative" class="white">
+    <AuthBar />
+    <router-view />
+  </v-app>
 </template>
 
 <style scoped>
 </style>
 
 <script>
+import AuthBar from "../../components/Navbars/authPages.vue";
 export default {
   data() {
     return {
@@ -26,6 +27,9 @@ export default {
       rightDrawer: false,
       title: "Vuetify.js"
     };
+  },
+  components: {
+    AuthBar
   }
 };
 </script>

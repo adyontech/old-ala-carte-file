@@ -1,12 +1,12 @@
 <template>
-  <v-layout align-center justify-center row fill-height>
-    <v-flex xs12 md5 class="mid-box">
+  <v-layout align-center justify-center row fill-height class="white">
+    <v-flex xs12 md5 class="mid-box elevation-3">
       <v-card flat style="padding:0">
-        <v-layout class="selector-tab" align-center justify-center row fill-height>
-          <v-flex xs6 @click="tabSwitchToSignup" class="selector-tab-content" :style="styleObjectSignUp">
+        <v-layout class="selector-tab " align-center justify-center row fill-height>
+          <v-flex xs6 @click="tabSwitchToSignup" class="selector-tab-content pt-3" :style="styleObjectSignUp">
             Signup
           </v-flex>
-          <v-flex xs6 @click="tabSwitchToLogin" class="selector-tab-content" :style="styleObjectLogin">
+          <v-flex xs6 @click="tabSwitchToLogin" class="selector-tab-content pt-3" :style="styleObjectLogin">
             Login
           </v-flex>
         </v-layout>
@@ -20,13 +20,14 @@
 </template>
 <style>
 .mid-box {
-  border: 1px solid black;
+  border: 1px solid #c2c7d0;
   border-bottom: 0;
+  border-radius: 1%;
 }
 .selector-tab-content {
   font-size: 25px;
   padding: 5px;
-  height: 55px;
+  height: 70px;
 }
 </style>
 

@@ -1,7 +1,7 @@
 <template>
     <div>
         <v-content>
-            <v-layout column class="grey lighten-4" pa-5>
+            <v-layout column class="white" pa-5>
                 <v-flex class="blue--text text--accent-2" style="font-size:30px" my-3>
                     Signup In to your hirerare Account
                 </v-flex>

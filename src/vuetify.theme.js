@@ -28,6 +28,7 @@ import {
   VDivider,
   VMenu,
   VCheckbox,
+  VImg,
   VAutocomplete
 } from "vuetify";
 
@@ -39,6 +40,7 @@ Vue.use(Vuetify, {
     VApp,
     VRadioGroup,
     VDataTable,
+    VImg,
     VAvatar,
     VSelect,
     VCarousel,
