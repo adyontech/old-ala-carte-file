@@ -1,50 +1,50 @@
 <template>
-    <div>
-        <v-layout column class="white" pa-5>
-            <v-flex xs11>
-                <v-text-field color="grey darken-1" hint="Please choose special email" prepend-icon="email" outline v-model="user.email" single-line placeholder="Enter the email used during signup..."></v-text-field>
-            </v-flex>
-            <v-flex xs11>
-                <v-text-field color="grey darken-1" v-model="user.password" prepend-icon="vpn_key" type="password" outline single-line label="Enter the password used during signup..."></v-text-field>
+  <div>
+    <v-layout column class="white" pa-5>
+      <v-flex xs11>
+        <v-text-field color="grey darken-1" hint="Please choose special email" prepend-icon="email" outline v-model="user.email" single-line placeholder="Enter the email used during signup..."></v-text-field>
+      </v-flex>
+      <v-flex xs11>
+        <v-text-field color="grey darken-1" v-model="user.password" prepend-icon="vpn_key" type="password" outline single-line label="Enter the password used during signup..."></v-text-field>
 
-            </v-flex>
-            <v-flex pb-1>
-                <v-layout align-center justify-end row fill-height class="blue--text text--accent-2 subheading">
-                    Forgot password?
-                </v-layout>
-            </v-flex>
-            <v-flex mb-1>
-                <v-layout row justify-center>
-                    <v-flex xs3>
-                        <v-btn block class="white--text px-5" @click="handleUserLogin" style="border-radius:5px" color="blue accent-2">Sign up</v-btn>
-                    </v-flex>
-                </v-layout>
-            </v-flex>
-            <v-divider></v-divider>
-            <v-flex py-1>
-                <v-layout align-center justify-center="" row fill-height class="black--text text--accent-2 subheading">
-                    or connect with
-                </v-layout>
-            </v-flex>
-            <v-layout align-center justify-space-around row fill-height>
-                <v-flex mx-2>
-                    <v-btn block class="white--text px-3" @click="handleUserLogin" style="border-radius:5px" color="red accent-2">Google</v-btn>
-                </v-flex>
-                <v-flex mx-2>
-                    <v-btn block class="white--text px-3" @click="handleUserLogin" style="border-radius:5px" color="green accent-2">Facebook</v-btn>
-                </v-flex>
-                <v-flex mx-2>
-                    <v-btn block class="white--text px-3" @click="handleUserLogin" style="border-radius:5px" color="blue accent-2">LinkedIn</v-btn>
-                </v-flex>
-
-            </v-layout>
-            <v-flex pb-1 mt-2>
-                <v-layout align-center justify-center="" row fill-height class="black--text text--accent-2 subheading">
-                    By signing up, you agree to our <span class="blue--text"> Terms of Service and Privacy Policy</span>
-                </v-layout>
-            </v-flex>
+      </v-flex>
+      <v-flex pb-1>
+        <v-layout align-center justify-end row fill-height class="blue--text text--accent-2 subheading">
+          Forgot password?
         </v-layout>
-    </div>
+      </v-flex>
+      <v-flex mb-1>
+        <v-layout row justify-center>
+          <v-flex xs3>
+            <v-btn block class="white--text px-5" @click="handleUserLogin" style="border-radius:5px" color="blue accent-2">Sign up</v-btn>
+          </v-flex>
+        </v-layout>
+      </v-flex>
+      <v-divider></v-divider>
+      <v-flex py-1>
+        <v-layout align-center justify-center="" row fill-height class="black--text text--accent-2 subheading">
+          or connect with
+        </v-layout>
+      </v-flex>
+      <v-layout align-center justify-space-around row fill-height>
+        <v-flex mx-2>
+          <v-btn block class="white--text px-3" @click="handleUserLogin" style="border-radius:5px" color="red accent-2">Google</v-btn>
+        </v-flex>
+        <v-flex mx-2>
+          <v-btn block class="white--text px-3" @click="handleUserLogin" style="border-radius:5px" color="green accent-2">Facebook</v-btn>
+        </v-flex>
+        <v-flex mx-2>
+          <v-btn block class="white--text px-3" @click="handleUserLogin" style="border-radius:5px" color="blue accent-2">LinkedIn</v-btn>
+        </v-flex>
+
+      </v-layout>
+      <v-flex pb-1 mt-2>
+        <v-layout align-center justify-center="" row fill-height class="black--text text--accent-2 subheading">
+          By signing up, you agree to our <span class="blue--text"> Terms of Service and Privacy Policy</span>
+        </v-layout>
+      </v-flex>
+    </v-layout>
+  </div>
 </template>
 
 <script>

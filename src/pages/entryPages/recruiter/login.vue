@@ -39,7 +39,7 @@
 
       </v-layout>
       <v-flex pb-1 mt-2>
-        <v-layout align-center justify-center="" row fill-height class="black--text text--accent-2 subheading">
+        <v-layout align-center justify-center row fill-height class="black--text text--accent-2 subheading">
           By signing up, you agree to our <span class="blue--text"> Terms of Service and Privacy Policy</span>
         </v-layout>
       </v-flex>
