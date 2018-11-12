@@ -51,7 +51,7 @@
 import axios from "axios";
 import { mapMutations } from "vuex";
 import store from "./../../..//store/store";
-import { loginRecruiter } from "./../../../api/auth/index.js";
+import { registerRecruiter } from "./../../../api/auth/index.js";
 export default {
   data() {
     return {
@@ -73,7 +73,7 @@ export default {
     };
   },
   mounted() {
-    window.document.title = "Login";
+    window.document.title = "Recruiter signup";
   },
   methods: {
     ...mapMutations(["setTokenForUser"]),
@@ -85,7 +85,7 @@ export default {
         return false;
       else return true;
     },
-    handleUserLogin() {
+    async handleUserLogin() {
       let email = this.user.email;
       let password = this.user.password;
 
@@ -94,30 +94,20 @@ export default {
       //   return;
       // }
 
-      this.loading = true;
+      let response = await registerRecruiter({ email, password });
 
-      loginRecruiter({ email, password })
-        .then(response => {
-          console.log(response);
-          return response.data;
-        })
-        .then(data => {
-          if (data.error === undefined) {
-            if (data.success) {
-              this.setTokenForUser({
-                token: data.token
-              });
-              this.$router.push({
-                path: "/dashboard"
-              });
-            } else {
-              // this.displayMessage("error", data.message);
-            }
-          } else {
-            // this.displayMessage("error", data.error);
-          }
-          this.loading = false;
-        });
+      if (response.error === undefined) {
+        if (data.success) {
+          this.setTokenForUser({
+            token: data.token
+          });
+          this.$router.push({
+            // path: "/dashboard"
+          });
+        } else {
+          // this.displayMessage("error", data.message);
+        }
+      }
     }
   }
 };

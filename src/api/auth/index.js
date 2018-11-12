@@ -36,7 +36,7 @@ function loginRecruiter(userData) {
 
 function registerRecruiter(userData) {
   return axios
-    .post(`${store.getters.getBaseURL}/auth/recruiterRegister`, userData)
+    .post(`${store.getters.getBaseURL}/auth/recruiterSignup`, userData)
     .then(response => {
       return response.data;
     })

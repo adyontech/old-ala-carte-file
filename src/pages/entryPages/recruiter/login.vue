@@ -76,6 +76,7 @@ export default {
   mounted() {
     window.document.title = "Login";
   },
+
   methods: {
     ...mapMutations(["setTokenForUser"]),
     validateAllFields() {
@@ -86,39 +87,33 @@ export default {
         return false;
       else return true;
     },
-    handleUserLogin() {
-      let email = this.user.email;
-      let password = this.user.password;
+    async handleUserLogin() {
+      try {
+        let email = this.user.email;
+        let password = this.user.password;
 
-      // if (!this.validateAllFields()) {
-      //   this.displayMessage("warning", "Invalid Fields Format Entered");
-      //   return;
-      // }
+        // if (!this.validateAllFields()) {
+        //   this.displayMessage("warning", "Invalid Fields Format Entered");
+        //   return;
+        // }
 
-      this.loading = true;
+        let response = await loginRecruiter({ email, password });
 
-      loginRecruiter({ email, password })
-        .then(response => {
-          console.log(response);
-          return response.data;
-        })
-        .then(data => {
-          if (data.error === undefined) {
-            if (data.success) {
-              this.setTokenForUser({
-                token: data.token
-              });
-              this.$router.push({
-                path: "/dashboard"
-              });
-            } else {
-              // this.displayMessage("error", data.message);
-            }
+        if (response.error === undefined) {
+          if (data.success) {
+            this.setTokenForUser({
+              token: data.token
+            });
+            this.$router.push({
+              // path: "/dashboard"
+            });
           } else {
-            // this.displayMessage("error", data.error);
+            // this.displayMessage("error", data.message);
           }
-          this.loading = false;
-        });
+        }
+      } catch (error) {
+        console.log(error);
+      }
     }
   }
 };
