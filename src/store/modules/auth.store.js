@@ -21,7 +21,6 @@ export default {
 
       state.accessToken = localStorage.getItem("accessToken");
       const tokensExpiry = addSeconds(new Date(), tokenData.expiresIn);
-      console.log(tokensExpiry);
       state.tokensExpiry = tokensExpiry;
       localStorage.setItem("tokensExpiry", tokensExpiry);
       localStorage.setItem("expires_in", tokensExpiry);

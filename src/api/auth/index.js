@@ -45,4 +45,20 @@ function registerRecruiter(userData) {
     });
 }
 
-export { registerRecruiter, loginRecruiter, handleError };
+function refereshRecruiterToken() {
+  return axios
+    .post(`${store.getters.getBaseURL}/api/refereshRecruiterToken`, {})
+    .then(response => {
+      return response.data;
+    })
+    .catch(error => {
+      return handleError(error, ERROR_MSG);
+    });
+}
+
+export {
+  registerRecruiter,
+  loginRecruiter,
+  handleError,
+  refereshRecruiterToken
+};
