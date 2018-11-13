@@ -3,12 +3,7 @@ const applicantLogin = () => import("./applicant/index.vue");
 const recruiterLogin = () => import("./recruiter/index.vue");
 export default [
   {
-    path: "login",
-    // name: "login",
-    component: loginPage
-  },
-  {
-    path: "signup",
+    path: "",
     // name: "login",
     component: loginPage
   },
