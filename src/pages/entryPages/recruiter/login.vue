@@ -96,7 +96,6 @@ export default {
         //   this.displayMessage("warning", "Invalid Fields Format Entered");
         //   return;
         // }
-
         let response = await loginRecruiter({ email, password });
 
         if (response.error === undefined) {
