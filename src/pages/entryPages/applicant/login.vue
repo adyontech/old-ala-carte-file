@@ -49,7 +49,7 @@
 import axios from "axios";
 import { mapMutations } from "vuex";
 import store from "./../../..//store/store";
-import { loginRecruiter } from "./../../../api/auth/index.js";
+import { loginApplicant } from "./../../../api/auth/index.js";
 export default {
   data() {
     return {
@@ -71,7 +71,7 @@ export default {
     };
   },
   mounted() {
-    window.document.title = "Recruiter Login";
+    window.document.title = "Applicant Login";
   },
 
   methods: {
@@ -93,7 +93,7 @@ export default {
         //   this.displayMessage("warning", "Invalid Fields Format Entered");
         //   return;
         // }
-        let response = await loginRecruiter({ email, password });
+        let response = await loginApplicant({ email, password });
 
         if (response.error === undefined) {
           if (response.success) {

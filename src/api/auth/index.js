@@ -56,9 +56,45 @@ function refereshRecruiterToken() {
     });
 }
 
+function loginApplicant(userData) {
+  return axios
+    .post(`${store.getters.getBaseURL}/auth/applicantLogin`, userData)
+    .then(response => {
+      return response.data;
+    })
+    .catch(error => {
+      return handleError(error, ERROR_MSG);
+    });
+}
+
+function registerApplicant(userData) {
+  return axios
+    .post(`${store.getters.getBaseURL}/auth/applicantSignup`, userData)
+    .then(response => {
+      return response.data;
+    })
+    .catch(error => {
+      return handleError(error, ERROR_MSG);
+    });
+}
+
+function refereshApplicantToken() {
+  return axios
+    .post(`${store.getters.getBaseURL}/api/refereshApplicantToken`, {})
+    .then(response => {
+      return response.data;
+    })
+    .catch(error => {
+      return handleError(error, ERROR_MSG);
+    });
+}
+
 export {
   registerRecruiter,
   loginRecruiter,
   handleError,
-  refereshRecruiterToken
+  refereshRecruiterToken,
+  loginApplicant,
+  registerApplicant,
+  refereshApplicantToken
 };
