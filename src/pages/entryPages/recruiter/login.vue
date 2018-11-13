@@ -78,7 +78,7 @@ export default {
   },
 
   methods: {
-    ...mapMutations(["setTokenForUser"]),
+    ...mapMutations(["update_auth_tokens"]),
     validateAllFields() {
       if (
         !emailRegex.test(this.user.email) ||
@@ -101,10 +101,8 @@ export default {
 
         if (response.error === undefined) {
           if (response.success) {
-            console.log(response);
-            this.setTokenForUser({
-              token: response.token
-            });
+            // console.log(response);
+            this.update_auth_tokens(response);
             this.$router.push({
               // path: "/dashboard"
             });

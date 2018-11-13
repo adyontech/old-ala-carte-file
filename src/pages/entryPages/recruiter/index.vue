@@ -49,10 +49,8 @@ export default {
     SignUpTab
   },
   created() {
-    console.log(this.$route.query);
     if (this.$route.query.tab == "signup") {
       this.tabSwitchToSignup();
-      console.log("swith");
     }
   },
   methods: {

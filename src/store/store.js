@@ -6,7 +6,7 @@ Vue.use(Vuex);
 const store = new Vuex.Store({
   strict: true,
   modules: {
-    // AuthStore
+    AuthStore
   },
   state: {
     //  baseServerURL:"https://something.tk/",
