@@ -1,7 +1,7 @@
 const entryProfile = () => import("./entryProfile/index.vue");
 export default [
   {
-    path: "profileComplete",
+    path: "new",
     // name: "login",
     component: entryProfile
   }
