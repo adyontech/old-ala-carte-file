@@ -30,7 +30,7 @@
           <v-btn block class="white--text px-3" @click="handleUserLogin" style="border-radius:5px" color="red accent-2">Google</v-btn>
         </v-flex>
         <v-flex mx-2>
-          <v-btn href="http://localhost:3000/pass/facebook" block class="white--text px-3" @click="handleUserLogin" style="border-radius:5px" color="green accent-2">Facebook</v-btn>
+          <v-btn href="http://localhost:3000/pass/facebook" block class="white--text px-3" style="border-radius:5px" color="green accent-2">Facebook</v-btn>
         </v-flex>
         <v-flex mx-2>
           <v-btn block class="white--text px-3" @click="handleUserLogin" style="border-radius:5px" color="blue accent-2">LinkedIn</v-btn>

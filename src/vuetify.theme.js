@@ -31,7 +31,8 @@ import {
   VOverflowBtn,
   VImg,
   VAutocomplete,
-  VDatePicker
+  VDatePicker,
+  VProgressCircular
 } from "vuetify";
 
 Vue.use(Vuetify, {
@@ -41,6 +42,7 @@ Vue.use(Vuetify, {
   components: {
     VApp,
     VRadioGroup,
+    VProgressCircular,
     VDatePicker,
     VDataTable,
     VOverflowBtn,

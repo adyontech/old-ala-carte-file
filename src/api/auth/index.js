@@ -89,6 +89,19 @@ function refereshApplicantToken() {
     });
 }
 
+function facebookRecruiterEntry(code) {
+  console.log("sending");
+  return axios
+    .get(`${store.getters.getBaseURL}/pass/facebook?token${code}`)
+    .then(response => {
+      console.log(response);
+      return response.data;
+    })
+    .catch(error => {
+      return handleError(error, ERROR_MSG);
+    });
+}
+
 export {
   registerRecruiter,
   loginRecruiter,
@@ -96,5 +109,6 @@ export {
   refereshRecruiterToken,
   loginApplicant,
   registerApplicant,
-  refereshApplicantToken
+  refereshApplicantToken,
+  facebookRecruiterEntry
 };

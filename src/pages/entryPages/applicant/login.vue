@@ -46,7 +46,6 @@
 </template>
 
 <script>
-import axios from "axios";
 import { mapMutations } from "vuex";
 import store from "./../../..//store/store";
 import { loginApplicant } from "./../../../api/auth/index.js";
