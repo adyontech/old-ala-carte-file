@@ -91,6 +91,7 @@ function refereshApplicantToken() {
 
 function facebookRecruiterEntry(code) {
   console.log("sending");
+  console.log(code);
   return axios
     .get(`${store.getters.getBaseURL}/pass/facebook?token${code}`)
     .then(response => {

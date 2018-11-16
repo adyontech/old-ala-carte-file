@@ -33,10 +33,10 @@ function initSession() {
     const now = new Date();
     if (isAfter(now, tenMinutesBeforeExpiry)) {
       //If the token has expired or will expire in the next 10 minutes
-      console.log("Token expired/will expire in the next 1 minutes");
+      // console.log("Token expired/will expire in the next 1 minutes");
       // return Router.push("/recruiter");
     }
-    console.log("Token Ok. Expiring at " + tokenExpiryDate);
+    // console.log("Token Ok. Expiring at " + tokenExpiryDate);
     setTimeout(
       refreshTokens,
       differenceInMilliSeconds(tenMinutesBeforeExpiry, now)
@@ -65,7 +65,7 @@ async function refreshTokens() {
   try {
     let response = await refereshRecruiterToken();
 
-    console.log(response);
+    // console.log(response);
     if (response.error === undefined) {
       if (response.success) {
         Store.commit("update_auth_tokens", response);
@@ -74,6 +74,6 @@ async function refreshTokens() {
       }
     }
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 }
