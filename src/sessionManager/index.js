@@ -34,7 +34,7 @@ function initSession() {
     if (isAfter(now, tenMinutesBeforeExpiry)) {
       //If the token has expired or will expire in the next 10 minutes
       console.log("Token expired/will expire in the next 1 minutes");
-      return Router.push("/recruiter");
+      // return Router.push("/recruiter");
     }
     console.log("Token Ok. Expiring at " + tokenExpiryDate);
     setTimeout(
